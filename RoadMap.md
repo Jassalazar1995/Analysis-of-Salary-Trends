@@ -1,3 +1,5 @@
+# Navigating the Data Science Landscape: An In-Depth Analysis of Salary Trends and Market Dynamics
+
 ## Deliverables
 I will produce a report with the following deliverables:
 1. A clear statement of the business task you have selected to investigate
@@ -51,3 +53,30 @@ I should have two presentations, one for the technical interviewers and one for 
 ## Prepare
 I have found some data from Kaggle called 'Jobs and Salaries in Data Science, Salary trends in Data-Related Careers' by Hummaam Qaasim.
 https://www.kaggle.com/datasets/hummaamqaasim/jobs-in-data
+
+Where is your data located?
+My data is located locally and on Github: https://github.com/Jassalazar1995/Analysis-of-Salary-Trends
+● How is the data organized?
+The data has 12 columns and a little over 9000 enteries with no missing values. The data includes both categorical, such as, title and experience level and numerical, such as, salary in USD.
+● Are there issues with bias or credibility in this data? Does your data ROCCC?
+This data does seem to be reliable since it is complete and it is unclear if it is accucate but brief google searches seem to indicate that it is inline with other averages. It is unclear if this data is bias.
+The data is original.
+The data is comprehensive.
+The data is going up to 2023, so the data is current. Therefor the data ROCCCs.
+The data is cited, coming from: https://ai-jobs.net/salaries/2023/
+● How are you addressing licensing, privacy, security, and accessibility?
+The data is an open, The licensor has granted me a worldwide royalty-free, non exclusive, perpetual, irrevocable copyright license to do what I will be doing with the data, refer to https://www.kaggle.com/datasets/hummaamqaasim/jobs-in-data and https://opendatacommons.org/licenses/dbcl/dbcl-10.txt
+● How did you verify the data’s integrity?
+I checked the website the data comes from, https://ai-jobs.net/salaries/2023/ and determined that they are a reputable company respected by the data science community.
+● How does it help you answer your question?
+It provides the major factors I need to understand salary trends such as Salary, job category, job title, employee residence, and experience level 
+● Are there any problems with the data?
+The only problem with the data is that it is very clean. This is an issue because it doesn't allow me to effectively display the cleaning process.
+
+ Download data and store it appropriately.
+● Identify how it’s organized.
+The data has 12 columns and a little over 9000 enteries with no missing values. The data includes both categorical, such as, title and experience level and numerical, such as, salary in USD. Reference Analysis.py, function: data_organization(data). 
+● Sort and filter the data.
+I sorted and filtered the data and saved it into a dictionary where each key is a job title and the value is a dataframe containing the data for that job title sorted by salary in descending order.
+● Determine the credibility of the data.
+The data is complete and very clean as there are no missing values and the data in the columns are the same type, reference Analysis.py, functions: missing_values(data), check_datatype(data) data_organization(data). 
