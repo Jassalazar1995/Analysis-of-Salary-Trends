@@ -1,5 +1,5 @@
 import pandas as pd
-
+import numpy as np
 # load the data
 data = pd.read_csv('./jobs_in_data.csv')
 
@@ -37,8 +37,18 @@ def create_pivot_table(data):
     print(pivot_table)
     return
 
+def aggregate_data(data):
+    # Aggregate data by job title, experience level, and employee residence
+    aggregated_data = data.groupby(['job_title', 'experience_level', 'employee_residence']).agg(
+        average_salary_usd=('salary_in_usd', lambda x: np.floor(x.mean())),
+        count=('job_title', 'count')
+    ).reset_index()
+    print(aggregated_data)
+    return aggregated_data
+
 #data_organization(data)
 #missing_values(data)
 #check_datatype(data)
-sort_and_filter(data)
+#sort_and_filter(data)
 #create_pivot_table(data)
+aggregate_data(data)

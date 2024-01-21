@@ -59,7 +59,7 @@ My data is located locally and on Github: https://github.com/Jassalazar1995/Anal
 ● How is the data organized?
 The data has 12 columns and a little over 9000 enteries with no missing values. The data includes both categorical, such as, title and experience level and numerical, such as, salary in USD.
 ● Are there issues with bias or credibility in this data? Does your data ROCCC?
-This data does seem to be reliable since it is complete and it is unclear if it is accucate but brief google searches seem to indicate that it is inline with other averages. It is unclear if this data is bias.
+This data does seem to be reliable since it is complete and it is unclear if it is accucate but brief google searches seem to indicate that it is inline with other averages. There could be some possible bias in this data since the data was collected by survey submission which is done on the website, and jobs with open salaries. This may cause some bias since you would have to be the kind of person who would be on this website and willing to disclose (even if anynonmous) your pay information. 
 The data is original.
 The data is comprehensive.
 The data is going up to 2023, so the data is current. Therefor the data ROCCCs.
@@ -80,3 +80,47 @@ The data has 12 columns and a little over 9000 enteries with no missing values. 
 I sorted and filtered the data and saved it into a dictionary where each key is a job title and the value is a dataframe containing the data for that job title sorted by salary in descending order.
 ● Determine the credibility of the data.
 The data is complete and very clean as there are no missing values and the data in the columns are the same type, reference Analysis.py, functions: missing_values(data), check_datatype(data) data_organization(data). 
+
+Guiding questions
+● What tools are you choosing and why?
+I am choosing to use Python even though I am more familiar with R. I am doing this because I believe that Python is generally more accepted and used in industry and has libraries I am interested in mastering such as Pytorch and Tensorflow. I do believe that R is faster, however I know that once I get more comfortable with the data analysis process I can switch to Cython to increase the speed for when I start working with larger data sets. I will always have R in my back pocket, and I appreciate everything that R studios offers as I feel it provides a friendlier way to do data analysis compaired to Python I want to be able to have more tools at my disposal instead of pigeonholing myself into just one language. Especially with the advent of AI and chatGPT, I am able to branch out with the ability to minimize the learning curve of different languages.  
+
+
+
+● Have you ensured your data’s integrity?
+To determine the datas' integrity I have looked at its accuracy, completenes, consistency, and trustworthinesss. 
+To check its accuracy, I have some working knowledge general salary ranges in the data sector and a brief overview of the data aligns with this knowledge. Secondly, I did some google searches that corroberated that the averages and spreads are atleast in the same ballpark as the data.
+I have checked the datas' to see if it is completeness and consistency by running some analysis in Analysis.py by checking for missing values and checking data types.
+I have checked the datas' to see if it is trustworthy by researching the website that it comes from, https://ai-jobs.net/salaries/2023/, and have determined that it is a trustworthy enough website as it is a legitimate. The only hang up I have about this data in terms of trustworthiness is that anyone can submit survey data into the website which means that it can be skewed by people trying to manipulate the pay ranges.
+
+● What steps have you taken to ensure that your data is clean?
+To check the data is clean I checked the following:
+-missing data, columns have the same data type, and have found duplicate data, however, the data doesn't have IDs so I assume its not duplicate data and it is just multiple people with the same employement situation. 
+
+● How can you verify that your data is clean and ready to analyze?
+I did spot checks on the data by hand in excel to grab random samples. I also emailed the website to double check that the duplicate data isn't actually duplicate data.
+
+● Have you documented your cleaning process so you can review and share those results?
+I have.
+
+● How should you organize your data to perform analysis on it?
+I am only interested in a few job titles: Data Analyst, Data Engineer, Data Scientist, ML Engineer, MLOps Engineer, Research Analyst
+● Has your data been properly formatted?
+● What surprises did you discover in the data?
+● What trends or relationships did you find in the data?
+● How will these insights help answer your business questions?
+
+# Comments 
+This numbering system corresponds to the comments made the Analysis.ipynb.
+
+# Comment
+It seems that the majority of the people that answered the survey or have salary information open to the public are in the US. This is not indicative of the entire world population.
+
+# Comment 1
+print('So after a quick overview at the data, there are a few things of note: it is normalish (I am not worried about going further are the moment since I am going to narrow the data soon), there is a very interesting second bump near the 400k mark, there is a dip near the center of the distribution and the left side is pretty steep. So far we have included the world, but I would like to look at salaries in the United States')
+
+# Comment 2
+print('So after a quick overview at the data, there are a few things of note: it is normalish, there is a very interesting second bump near the 400k mark, there seems to be a standard price of someone that works in data is 150,000 USD, it has a tail towards the right, and has a steep climb on the left. I would like to see how normal this distribution is as it will influence my analysis of it.')
+
+# Comment 3
+print('So by looking at the Q-Q plot I know that it is not Guassian, which is unfortunate but manageable. I took a look at the skewness(width/pancakifcation) and Kurtosis (height/spaghettification) to understand how to properly classify it. \nSince skew is positive we know its right skewed,\nSince kurtosis is positive we know there are more outliers than normal. \nIn other words its wide and leaning to the right. This is important to know as it will influence what kind of tests and methods we can and cannot use on this data. In context, this means that there are more people getting paid higher than 150000 USD than not.')
